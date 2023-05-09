@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(65, 63, 61);
+}
+
+
+
+/*Photos */
+
+.container{
+    width: 1150px;
+    background-color: rgb(27, 29, 29 , 0.5);
+    margin: 50px auto ;
+    padding: 50px 30px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    
+}
+
+
+.container .the-image{
+    width: 50%;
+    margin-top: 26px;
+}
+
+.container .the-image img{
+    border: 1px solid #fff;
+    padding: 2px;
+    border-radius: 4px;
+    width:100%;
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+}
+
+canvas {
+    width: 0;
+}
+
+.container .the-image .upload{
+    text-align: center;
+    margin-top: 20px;
+} 
+
+
+.container .the-image .upload input{
+    display: none;
+}
+
+.container .the-image .upload label{
+    color: #fff;
+    border: 2px dashed #fff;
+    padding: 7px 10px ;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.container .the-image .upload label:hover{
+    border-style: solid;
+    cursor: pointer;
+    background-color: rgb(65, 63, 61);
+}
+
+
+
+/*Editors */
+
+.container .editors {
+    margin-right: 150px;
+}
+
+.container .editors ul {
+    list-style: none;
+    font-size: 20px;
+    color: #fff;
+}
+
+
+.container .editors ul li {
+    padding: 5px 5px;
+    margin-top: -1px;
+}
+
+
+
+.container .editors ul li label{
+    text-transform: capitalize;
+}
+
+.container .editors ul li  input
+{
+    width: 150%;
+
+}
+
+
+.buttons{
+    width: 150%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5px;
+}
+
+.buttons button  , .buttons a button {
+    color: #fff;
+    border: none;
+    padding: 7px 10px ;
+    border-radius: 5px;
+    transition: 0.5s;
+    background-color:#015CC8;
+    font-size: 16px;
+}
+
+.buttons button:hover {
+    cursor: pointer;
+    background-color:#0c53aa;
+}
+
+
+.buttons button:disabled , .buttons a:disabled{
+    background-color: transparent;
+    cursor: no-drop;
+    border: 1px solid #fff;
+}
+
+
+
+
+
+
+
+/*Responsive*/
+
+@media only screen and (max-width:1100px){
+    .container{
+        flex-direction: column;
+    }
+    .container .editors ul li label{
+        display: block;
+    }
+    .container .editors ul li input{
+        width: 70%;
+    }
+    .buttons{
+        width: 70%;
+        justify-content: space-between;
+    }
+
+}
+
+@media screen and (max-width:700px){
+
+    .container .editors ul li input{
+        width: 50%;
+    }
+
+    .container .the-image{
+        width: 44%;
+    }
+    .buttons{
+        width: 50%;
+        justify-content: space-between;
+    }
+}
+
+

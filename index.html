@@ -1,78 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="./photo-film-solid.svg" type="image/x-icon" />
+    <link rel="shortcut icon" href="./photo-film-solid.svg" type="image/x-icon" />
+
     <title>Photo Editor</title>
 </head>
+
 <body>
-    
-<div class="container">
-    <div class="the-image">
 
-        <div class="img">
-            <img id="img"  >
-            <canvas id="canvas"></canvas>
+    <div class="container">
+        <div class="the-image">
+
+            <div class="img">
+                <img id="img">
+                <canvas id="canvas"></canvas>
+            </div>
+
+            <div class="upload">
+                <label for="upload">Upload</label>
+                <input type="file" id="upload">
+            </div>
+
         </div>
 
-        <div class="upload">
-            <label for="upload">Upload</label>
-            <input type="file" id="upload">
-        </div>
 
-    </div>    
+        <div class="editors">
+            <ul>
+                <li>
+                    <label for="grayscale">grayscale</label>
+                    <input type="range" name="grayscale" min="0" id="grayscale" max="100" value="0">
+                </li>
 
+                <li>
+                    <label for="sepia">sepia</label>
+                    <input type="range" name="sepia" min="0" id="sepia" max="100" value="0">
+                </li>
 
-    <div class="editors">
-        <ul>
-            <li>
-                <label for="grayscale">grayscale</label>
-                <input type="range" name="grayscale" min="0" id="grayscale" max="100"  value="0">
-            </li>
+                <li>
+                    <label for="blur">blur</label>
+                    <input type="range" name="blur" min="0" id="blur" max="10" step="0.1" value="0">
+                </li>
 
-            <li>
-                <label for="sepia">sepia</label>
-                <input type="range" name="sepia" min="0" id="sepia" max="100" value="0">
-            </li>
+                <li>
+                    <label for="hue">hue</label>
+                    <input type="range" name="hue" min="0" id="hue" max="360" value="0">
+                </li>
 
-            <li>
-                <label for="blur">blur</label>
-                <input type="range" name="blur" min="0" id="blur" max="10" step="0.1" value="0">
-            </li>
+                <li>
+                    <label for="opacity">opacity</label>
+                    <input type="range" name="opacity" min="0" id="opacity" max="100" value="100">
+                </li>
 
-            <li>
-                <label for="hue">hue</label>
-                <input type="range" name="hue" min="0" id="hue" max="360" value="0">
-            </li>
+                <li>
+                    <label for="saturate">saturate</label>
+                    <input type="range" name="saturate" min="0" id="saturate" max="200" value="100">
+                </li>
 
-            <li>
-                <label for="opacity">opacity</label>
-                <input type="range" name="opacity" min="0" id="opacity" max="100" value="100">
-            </li>
+                <li>
+                    <label for="contrast">contrast</label>
+                    <input type="range" name="contrast" min="0" id="contrast" max="200" value="100">
+                </li>
 
-            <li>
-                <label for="saturate">saturate</label>
-                <input type="range" name="saturate" min="0" id="saturate" max="200" value="100">
-            </li>
-
-            <li>
-                <label for="contrast">contrast</label>
-                <input type="range" name="contrast" min="0" id="contrast" max="200" value="100">
-            </li>
-
-            <li>
-                <label for="brightness">brightness</label>
-                <input type="range" name="brightness" min="0" id="brightness" max="200" value="100">
-            </li>
-        </ul>
-        <div class="buttons">
-            <a download="image" id="download"><button  id="download-link">Download</button></a>
-            <button id="reset">Reset</button>
+                <li>
+                    <label for="brightness">brightness</label>
+                    <input type="range" name="brightness" min="0" id="brightness" max="200" value="100">
+                </li>
+            </ul>
+            <div class="buttons">
+                <a download="image" id="download"><button id="download-link">Download</button></a>
+                <button id="reset">Reset</button>
+            </div>
         </div>
     </div>
-</div>
-<script src="js/app.js"></script>
+    <script src="js/app.js"></script>
 </body>
+
 </html>
